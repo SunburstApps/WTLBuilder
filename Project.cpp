@@ -54,7 +54,7 @@ BOOL __stdcall CProject::Open(BSTR fn)
 	if (fileName.IsFilePath() == FALSE)
 	{
 		COMDLG_FILTERSPEC filter;
-		filter.pszName = L"WTL Builder designer layout";
+		filter.pszName = L"Designer layout";
 		filter.pszSpec = L"*.wff";
 
 		DWORD dialogFlags = FOS_FORCEFILESYSTEM | FOS_PATHMUSTEXIST | FOS_FILEMUSTEXIST;
