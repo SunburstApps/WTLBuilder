@@ -8,6 +8,7 @@
 #include "StdAfx.h"
 #include "Register.h"
 #include "formtype.h"
+#include <atldlgs.h>
 //////////////////////////////////////////////////////////////////////////
 LRESULT CFormType::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 {
@@ -184,27 +185,12 @@ LRESULT CFormType::OnItemClick(WPARAM, LPNMHDR, BOOL &)
 
 CString CFormType::ShowBrowseDlg()
 {
-	TCHAR path[MAX_PATH];
-	memset(path, 0, MAX_PATH);
-	BROWSEINFO bi = { 0 };
-	bi.lpszTitle = _T("Folder Location");
-	bi.hwndOwner = (HWND)m_hWnd;
-	bi.ulFlags = BIF_NEWDIALOGSTYLE | BIF_RETURNONLYFSDIRS;
+	CShellFileOpenDialog folderDialog = CShellFileOpenDialog(nullptr, FOS_FORCEFILESYSTEM | FOS_PATHMUSTEXIST | FOS_FILEMUSTEXIST | FOS_PICKFOLDERS, nullptr, nullptr, 0);
+	folderDialog.DoModal(m_hWnd);
 
-	LPITEMIDLIST pidl = SHBrowseForFolder(&bi);
-	if (pidl != 0)
-	{
-		// get the name of the folder
-		SHGetPathFromIDList(pidl, path);
-		// free memory used
-		IMalloc * imalloc = 0;
-		if (SUCCEEDED(SHGetMalloc(&imalloc)))
-		{
-			imalloc->Free(pidl);
-			imalloc->Release();
-		}
-	}
-	return CString(path);
+	CString path;
+	folderDialog.GetFilePath(path);
+	return path;
 }
 
 LRESULT CFormType::OnBrowse(WORD /*wNotifyCode*/, WORD wID, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
