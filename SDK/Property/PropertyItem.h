@@ -269,12 +269,10 @@ public:
 
 	template <typename T> T GetPropValue(LPCTSTR name)
 	{
-		T ret = (T)0; //hide prop instead of remowing it
 		void * val = getPropValue(name);
+		if (val != NULL) return *(T*)val;
 
-		if (val != NULL)
-			ret = *(T*)val;
-		return ret;
+		T default_value; return default_value;
 	}
 
 protected:
