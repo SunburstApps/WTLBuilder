@@ -671,14 +671,15 @@ void CFormComponent::SaveForm(Component * frm, SaveOperation operation)
 
 			if (fileName.GetPath().IsEmpty() || fileName.GetTitle().IsEmpty() || operation == soSaveAs)
 			{
-				static _TCHAR Filter[] = _T("Form Files (*.wff)\0*.wff\0");
-				CPath fn((LPCTSTR)get_Name());
-				fn.SetExt(_T("wff"));
-				CFileDialog filedlg(FALSE, _T("*.wff"), (LPCTSTR)fn, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST, Filter);
-				if (filedlg.DoModal(GetDesktopWindow()) != IDOK)
-					return;
+				COMDLG_FILTERSPEC filterSpec;
+				filterSpec.pszName = L"Designer layout";
+				filterSpec.pszSpec = L"*.wff";
+				CShellFileSaveDialog saveDialog = CShellFileSaveDialog(nullptr, 2114, L".wff", &filterSpec, 1);
+				if (saveDialog.DoModal(GetDesktopWindow()) != IDOK) return;
 
-				fileName = filedlg.m_szFileName;
+				CString fileNameString;
+				saveDialog.GetFilePath(fileNameString);
+				fileName.SetPath(fileNameString, false);
 			}
 
 			{
