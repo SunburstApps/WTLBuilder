@@ -270,9 +270,7 @@ public:
 	template <typename T> T GetPropValue(LPCTSTR name)
 	{
 		void * val = getPropValue(name);
-		if (val != NULL) return *(T*)val;
-
-		T default_value; return default_value;
+		return *(T*)val;
 	}
 
 protected:
