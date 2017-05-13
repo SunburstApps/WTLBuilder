@@ -53,10 +53,18 @@ BOOL __stdcall CProject::Open(BSTR fn)
 
     if(fileName.IsFilePath()==FALSE)
     {
-        CFileDialog filedlg(TRUE,_T("*.wff"),NULL,OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT|OFN_PATHMUSTEXIST,FormFilter);
-        if(filedlg.DoModal(::GetDesktopWindow())!=IDOK)
+		COMDLG_FILTERSPEC filter;
+		filter.pszName = L"WTL Builder designer layout";
+		filter.pszSpec = L"*.wff";
+
+		DWORD dialogFlags = FOS_FORCEFILESYSTEM | FOS_PATHMUSTEXIST | FOS_FILEMUSTEXIST;
+		CShellFileOpenDialog filedlg = CShellFileOpenDialog(nullptr, dialogFlags, L".wff", &filter, 1);
+		if(filedlg.DoModal(::GetDesktopWindow())!=IDOK)
             return FALSE;
-        fileName=filedlg.m_szFileName;
+
+		CString fileNameString;
+		filedlg.GetFilePath(fileNameString);
+		fileName.SetPath(fileNameString, false);
     }
 
     CWaitCursor wc;
