@@ -151,16 +151,16 @@ IDR_MAINFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "New...",                      ID_FILE_NEW
-        MENUITEM "Open...",                     57601
-        MENUITEM "Close",                       57602
+        MENUITEM "&New...",                      ID_FILE_NEW
+        MENUITEM "&Open...",                     57601
+        MENUITEM "&Close",                       57602
         MENUITEM SEPARATOR
-        MENUITEM "Save",                        57603
-        MENUITEM "Save All",                    ID_FILE_SAVEALL
-        MENUITEM "Save As...",                  57604
-        MENUITEM "Save As Template...",         ID_FILE_SAVEAS_TEMPLATE
+        MENUITEM "&Save",                        57603
+        MENUITEM "Sa&ve All",                    ID_FILE_SAVEALL
+        MENUITEM "Save &As...",                  57604
+        MENUITEM "Save As &Template...",         ID_FILE_SAVEAS_TEMPLATE
         MENUITEM SEPARATOR
-        MENUITEM "&Generate localization template file...", ID_FILE_GENERATE_LOC_FILE
+        MENUITEM "&Generate locali&zation template file...", ID_FILE_GENERATE_LOC_FILE
         MENUITEM SEPARATOR
         POPUP "Recent &Files"
         BEGIN
