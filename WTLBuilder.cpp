@@ -100,29 +100,7 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lp
     Gdiplus::GdiplusStartupOutput gso;
     Gdiplus::GdiplusStartup(&uToken, &gsi, &gso);
 
-    TCHAR szTokens[] = _T("-/");
-
-    int nRet = 0;
-    BOOL bRun = TRUE;
-    LPCTSTR lpszToken = FindOneOf(lpstrCmdLine, szTokens);
-    while (lpszToken != NULL)
-    {
-        if (lstrcmpi(lpszToken, _T("unreg"))==0)
-        {
-            bRun = FALSE;
-            break;
-        }
-        if (lstrcmpi(lpszToken, _T("reg"))==0)
-        {
-            bRun = FALSE;
-            RegisterWFF();
-            break;
-        }
-        lpszToken = FindOneOf(lpszToken, szTokens);
-    }
-    
-    if(bRun)
-        nRet = Run(lpstrCmdLine, nCmdShow);
+    int nRet = Run(lpstrCmdLine, nCmdShow);
 
     _Module.Term();
 
