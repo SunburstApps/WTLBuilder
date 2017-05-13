@@ -294,4 +294,7 @@
       <UserProperties RESOURCE_FILE="WTLBuilder.rc" />
     </VisualStudio>
   </ProjectExtensions>
+  <Target Name="_PackageAppx" AfterTargets="AfterBuild">
+    <MSBuild Projects="AppxPackage\package.proj" Properties="SolutionDir=$(SolutionDir)" />
+  </Target>
 </Project>

@@ -123,7 +123,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-  <Target Name="_PackageAppx" AfterTargets="AfterBuild">
-    <MSBuild Projects="package.proj" Properties="SolutionDir=$(SolutionDir)" />
-  </Target>
 </Project>
