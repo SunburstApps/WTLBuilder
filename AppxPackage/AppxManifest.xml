@@ -14,7 +14,7 @@
   <Identity Name="WTLBuilder" Publisher="CN=William Kent - Internal Publisher" ProcessorArchitecture="x64" ResourceId="neutral" Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>Chromium for Windows Store</DisplayName>
+    <DisplayName>WTL Builder</DisplayName>
     <PublisherDisplayName>William Kent</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
