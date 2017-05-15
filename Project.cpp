@@ -81,7 +81,7 @@ BOOL __stdcall CProject::Open(BSTR fn)
 
 		if (PreReadForm(fileName.GetPath(), page, cmpName) == FALSE)
 		{
-			::MessageBox(NULL, MakeString(_T("Error loading form file %s."), (LPCTSTR)fileName), _T("WTLBuilder"), MB_OK);
+			::MessageBox(NULL, MakeString(_T("Error loading form file %s."), (LPCTSTR)fileName), _T("WTL Builder"), MB_OK);
 			return NULL;
 		}
 
@@ -94,7 +94,7 @@ BOOL __stdcall CProject::Open(BSTR fn)
 			SendEvent(evLoadForm, mainForm, &form, (LPCTSTR)fileName, FALSE);
 			if (form == NULL)
 			{
-				::MessageBox(NULL, MakeString(_T("Error loading form file %s."), (LPCTSTR)fileName), _T("WTLBuilder"), MB_OK);
+				::MessageBox(NULL, MakeString(_T("Error loading form file %s."), (LPCTSTR)fileName), _T("WTL Builder"), MB_OK);
 				return FALSE;
 			}
 		}
@@ -156,7 +156,7 @@ Component * CProject::CreateForm(const CString & _formFileName)
 
 	if (PreReadForm(formFileName, page, cmpName) == FALSE)
 	{
-		::MessageBox(NULL, MakeString(_T("Error loading form file %s."), (LPCTSTR)formFileName), _T("WTLBuilder"), MB_OK);
+		::MessageBox(NULL, MakeString(_T("Error loading form file %s."), (LPCTSTR)formFileName), _T("WTL Builder"), MB_OK);
 		return NULL;
 	}
 

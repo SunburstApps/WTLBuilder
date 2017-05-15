@@ -187,7 +187,7 @@ BEGIN
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&About WTLBuilder...",        ID_APP_ABOUT
+        MENUITEM "&About WTL Builder...",       ID_APP_ABOUT
     END
 END
 

@@ -159,7 +159,7 @@ BOOL isMSXMLInstalled()
 
 		if (_stscanf_s(szTemp + i + 1, _T("msxml%lf"), &dVer) == 0 || dVer < 4.0)
 		{
-			MessageBox(NULL, _T("Error: MSXML 4.0 is not installed."), _T("WTLBuilder"), MB_OK | MB_ICONSTOP);
+			MessageBox(NULL, _T("Error: MSXML 4.0 is not installed."), _T("WTL Builder"), MB_OK | MB_ICONSTOP);
 			return FALSE;
 		}
 		else
