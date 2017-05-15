@@ -185,10 +185,6 @@ BEGIN
         MENUITEM "Properties &Window\tAlt+Enter", ID_VIEW_PROPERTY
         MENUITEM "&Output",                     ID_VIEW_OUTPUT
     END
-    POPUP "&Options"
-    BEGIN
-        MENUITEM "&Options...",                 ID_OPTIONS_OPTIONS
-    END
     POPUP "&Help"
     BEGIN
         MENUITEM "&About WTLBuilder...",        ID_APP_ABOUT
