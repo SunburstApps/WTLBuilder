@@ -22,10 +22,10 @@ LRESULT CAboutDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lPara
 {
     m_toolTip.Create(m_hWnd);
 //{{WTLBUILDER_MEMBER_CREATION
-    m_formFont.CreateFont(-12,0,0,0,FW_NORMAL,false,false,false,DEFAULT_CHARSET,OUT_DEFAULT_PRECIS,CLIP_DEFAULT_PRECIS,DEFAULT_QUALITY,DEFAULT_PITCH|FF_DONTCARE,_T("MS Sans Serif"));
+    m_formFont.CreateFont(-12,0,0,0,FW_NORMAL,false,false,false,DEFAULT_CHARSET,OUT_DEFAULT_PRECIS,CLIP_DEFAULT_PRECIS,DEFAULT_QUALITY,DEFAULT_PITCH|FF_DONTCARE,_T("Segoe UI"));
     SetFont((HFONT)m_formFont);
     ModifyStyle(GetStyle(),WS_POPUP|WS_VISIBLE|WS_CLIPSIBLINGS|WS_CLIPCHILDREN|WS_SYSMENU);
-    ResizeClient(501,124);
+    ResizeClient(501,123);
     HICON hIcon = (HICON)::LoadImage(_Module.GetResourceInstance(), MAKEINTRESOURCE(IDR_MAINFRAME),
        IMAGE_ICON, ::GetSystemMetrics(SM_CXICON), ::GetSystemMetrics(SM_CYICON), LR_DEFAULTCOLOR);
     SetIcon(hIcon, TRUE);
@@ -40,22 +40,15 @@ LRESULT CAboutDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lPara
     m_picture5Bitmap.LoadBitmap(IDB_LOGO);
     m_picture5.SetBitmap(m_picture5Bitmap);
 
-    m_static8.Create(m_hWnd,CRect(218,10,495,25),_T("Copyright 2017 © FlatGlobus (wtlbuilder@gmail.com)"),WS_CHILD|WS_VISIBLE|SS_LEFT,0,IDC_CABOUTDLG_STATIC8);
+    m_static8.Create(m_hWnd,CRect(218,10,495,25),_T("Copyright © 2017 William Kent. All rights reserved."),WS_CHILD|WS_VISIBLE|SS_LEFT,WS_EX_TRANSPARENT,IDC_CABOUTDLG_STATIC8);
     m_static8.SetFont((HFONT)m_formFont);
 
-    m_static9.Create(m_hWnd,CRect(218,52,261,66),_T("Version"),WS_CHILD|WS_VISIBLE|SS_LEFT,0,IDC_CABOUTDLG_STATIC9);
-    m_static9Font.CreateFont(-12,0,0,0,FW_BOLD,false,false,false,DEFAULT_CHARSET,OUT_DEFAULT_PRECIS,CLIP_DEFAULT_PRECIS,DEFAULT_QUALITY,DEFAULT_PITCH|FF_DONTCARE,_T("MS Sans Serif"));
+    m_static9.Create(m_hWnd,CRect(218,52,261,66),_T("Version"),WS_CHILD|WS_VISIBLE|SS_LEFT,WS_EX_TRANSPARENT,IDC_CABOUTDLG_STATIC9);
+    m_static9Font.CreateFont(-12,0,0,0,FW_BOLD,false,false,false,DEFAULT_CHARSET,OUT_DEFAULT_PRECIS,CLIP_DEFAULT_PRECIS,DEFAULT_QUALITY,DEFAULT_PITCH|FF_DONTCARE,_T("Segoe UI"));
     m_static9.SetFont((HFONT)m_static9Font);
 
-    m_version.Create(m_hWnd,CRect(276,52,496,66),_T(""),WS_CHILD|WS_VISIBLE|WS_CLIPSIBLINGS|WS_CLIPCHILDREN|SS_LEFT,0,IDC_CABOUTDLG_STATIC11);
+    m_version.Create(m_hWnd,CRect(276,52,496,66),_T(""),WS_CHILD|WS_VISIBLE|WS_CLIPSIBLINGS|WS_CLIPCHILDREN|SS_LEFT,WS_EX_TRANSPARENT,IDC_CABOUTDLG_STATIC11);
     m_version.SetFont((HFONT)m_formFont);
-
-    m_hyperlink12.Create(m_hWnd,CRect(372,84,438,96),NULL,WS_CHILD|WS_VISIBLE|WS_CLIPSIBLINGS|WS_CLIPCHILDREN,0,IDC_CABOUTDLG_HYPERLINK12);
-    m_hyperlink12.SetLabel(_T(""));
-    m_hyperlink12.SetHyperLink(_T("wtlbuilder@gmail.com"));
-    m_hyperlink12.m_bPaintLabel=true;
-    m_hyperlink12.m_clrLink=RGB(0x00,0x00,0xFF);
-    m_hyperlink12.m_clrVisited=RGB(0x80,0x00,0x80);
 
 //}}WTLBUILDER_MEMBER_CREATION
 //{{WTLBUILDER_POST_CREATION

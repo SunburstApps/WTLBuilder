@@ -9,7 +9,6 @@
 #include "resource.h"
 #include "LayoutMgr.h"
 //{{WTLBUILDER_INCLUDE_DECLARATION
-#include "atlctrlx.h"
 //}}WTLBUILDER_INCLUDE_DECLARATION
 
 
@@ -18,7 +17,6 @@
 #define    IDC_CABOUTDLG_STATIC8    1008
 #define    IDC_CABOUTDLG_STATIC9    1009
 #define    IDC_CABOUTDLG_STATIC11    1011
-#define    IDC_CABOUTDLG_HYPERLINK12    1012
 //}}WTLBUILDER_CONTROL_ID_DECLARATION
 
 class CAboutDlg:public CDialogImpl<CAboutDlg>
@@ -33,7 +31,6 @@ class CAboutDlg:public CDialogImpl<CAboutDlg>
     CStatic    m_static9;
     CFont    m_static9Font;
     CStatic    m_version;
-    CHyperLink    m_hyperlink12;
 //}}WTLBUILDER_MEMBER_DECLARATION
 public:
     enum { IDD = IDD_NULL };
