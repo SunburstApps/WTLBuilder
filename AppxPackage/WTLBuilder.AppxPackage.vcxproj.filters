@@ -15,14 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Assets\Square44x44Logo.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Assets\Square150x150Logo.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
     <Xml Include="AppxManifest.xml">
       <Filter>Source Files</Filter>
     </Xml>

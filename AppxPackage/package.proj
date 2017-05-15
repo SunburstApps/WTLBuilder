@@ -7,8 +7,7 @@
 
   <ItemGroup>
     <AppxManifest Include="AppxManifest.xml" />
-    <VisualAsset Include="Assets\Square44x44Logo.png" />
-    <VisualAsset Include="Assets\Square150x150Logo.png" />
+    <VisualAsset Include="Assets\*.png" />
 
     <Content Include="$(SolutionDir)Bin\WTLBuilder.exe">
       <Destination>bin</Destination>
