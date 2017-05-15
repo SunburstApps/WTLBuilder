@@ -323,8 +323,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,54,1,1
- PRODUCTVERSION 0,54,1,1
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -341,12 +341,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Sunburst Solutions"
             VALUE "FileDescription", "WTL Builder"
-            VALUE "FileVersion", "0.57"
+            VALUE "FileVersion", "1.0.0.0"
             VALUE "InternalName", "WTLBuilder"
             VALUE "LegalCopyright", "Copyright © 2017 William Kent. All rights reserved."
             VALUE "OriginalFilename", "WTLBuilder.exe"
             VALUE "ProductName", "WTLBuilder"
-            VALUE "ProductVersion", "0.57"
+            VALUE "ProductVersion", "1.0.0.0"
         END
     END
     BLOCK "VarFileInfo"
