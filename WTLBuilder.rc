@@ -187,6 +187,7 @@ BEGIN
     END
     POPUP "&Help"
     BEGIN
+        MENUITEM "&Privacy Policy",             ID_HELP_PRIVACYPOLICY
         MENUITEM "&About WTL Builder...",       ID_APP_ABOUT
     END
 END

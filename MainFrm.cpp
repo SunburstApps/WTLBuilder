@@ -565,6 +565,12 @@ LRESULT CMainFrame::OnFileNewForm(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWn
 	return 0;
 }
 
+LRESULT CMainFrame::OnPrivacyPolicy(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
+{
+	ShellExecute(m_hWnd, "open", "https://github.com/SunburstApps/WTLBuilder/blob/master/Documentation/PRIVACY_POLICY.md", "", "", SW_SHOWNORMAL);
+	return 0;
+}
+
 LRESULT CMainFrame::OnAppAbout(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
 {
 	CAboutDlg dlg;
