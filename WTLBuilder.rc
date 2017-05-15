@@ -345,7 +345,7 @@ BEGIN
             VALUE "InternalName", "WTLBuilder"
             VALUE "LegalCopyright", "Copyright © 2017 William Kent. All rights reserved."
             VALUE "OriginalFilename", "WTLBuilder.exe"
-            VALUE "ProductName", "WTLBuilder"
+            VALUE "ProductName", "WTL Builder"
             VALUE "ProductVersion", "1.0.0.0"
         END
     END
