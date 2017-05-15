@@ -13,6 +13,7 @@
 #include "ModuleLoader.h"
 #include "Path.h"
 #include "cgfiltyp.h"
+#include <appmodel.h>
 
 CAppModule _Module;
 
@@ -39,6 +40,21 @@ LPCTSTR FindOneOf(LPCTSTR p1, LPCTSTR p2)
 
 int Run(LPTSTR lpstrCmdLine, int nCmdShow = SW_SHOWDEFAULT)
 {
+	{
+		UINT32 length = 0;
+		LONG rc = GetCurrentPackageFamilyName(&length, nullptr);
+		if (rc == APPMODEL_ERROR_NO_PACKAGE) {
+			CTaskDialog td;
+			td.SetWindowTitle(IDR_MAINFRAME);
+			td.SetMainInstructionText(IDS_NO_APPX_ERROR);
+			td.SetCommonButtons(TDCBF_CLOSE_BUTTON);
+			td.SetMainIcon(TD_ERROR_ICON);
+			td.ModifyFlags(0, TDF_ALLOW_DIALOG_CANCELLATION);
+			td.DoModal();
+			return -1;
+		}
+	}
+
 	CMessageLoop theLoop;
 	_Module.AddMessageLoop(&theLoop);
 

@@ -8,6 +8,7 @@
 #define IDD_ABOUTBOX                    100
 #define IDR_SCRIPTHOST                  101
 #define IDR_MAINFRAME                   128
+#define IDS_NO_APPX_ERROR               129
 #define IDB_ARROW                       201
 #define IDR_TOOLBAR1                    205
 #define IDR_COMPONENTS                  205
