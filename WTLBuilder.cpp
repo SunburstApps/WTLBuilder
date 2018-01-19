@@ -40,6 +40,7 @@ LPCTSTR FindOneOf(LPCTSTR p1, LPCTSTR p2)
 
 int Run(LPTSTR lpstrCmdLine, int nCmdShow = SW_SHOWDEFAULT)
 {
+#ifndef _DEBUG
 	{
 		UINT32 length = 0;
 		LONG rc = GetCurrentPackageFamilyName(&length, nullptr);
@@ -54,6 +55,7 @@ int Run(LPTSTR lpstrCmdLine, int nCmdShow = SW_SHOWDEFAULT)
 			return -1;
 		}
 	}
+#endif
 
 	CMessageLoop theLoop;
 	_Module.AddMessageLoop(&theLoop);
