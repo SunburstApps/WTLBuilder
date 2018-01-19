@@ -151,6 +151,7 @@
   <ItemGroup>
     <ClCompile Include="aboutdlg.cpp" />
     <ClCompile Include="cgfiltyp.cpp" />
+    <ClCompile Include="Config.cpp" />
     <ClCompile Include="CScriptEditor.cpp" />
     <ClCompile Include="CToolBoxWnd.cpp" />
     <ClCompile Include="FormType.cpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="aboutdlg.h" />
     <ClInclude Include="atlscript.h" />
     <ClInclude Include="cgfiltyp.h" />
+    <ClInclude Include="Config.h" />
     <ClInclude Include="CScriptEditor.h" />
     <ClInclude Include="CToolBoxWnd.h" />
     <ClInclude Include="FormType.h" />

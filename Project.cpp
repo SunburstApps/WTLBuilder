@@ -131,65 +131,64 @@ BOOL __stdcall CProject::CloseActive()
 
 Component * CProject::CreateForm(const CString & _formFileName)
 {
-	CString formFileName = _formFileName;
-	CString page(_T("Form"));
-	CString cmpName(_T("CFrameWindowImpl"));
-	BOOL	makeFromTemplate = formFileName.IsEmpty();
-	CString className;
-	CString formfilename;
+    CString formFileName=_formFileName;
+    CString page(_T("Form"));
+    CString cmpName(_T("CFrameWindowImpl"));
+    BOOL	makeFromTemplate=formFileName.IsEmpty();
+    CString formfilename;
 
-	CString location;
-	CString formName;
-	if (makeFromTemplate)
-	{
-		CFormType formType;
-		if (formType.DoModal() == IDOK)
-		{
-			formFileName = formType.GetComponentType();
-			location = formType.GetLocation();
-			formName = formType.GetFormName();
-			formfilename = formType.GetFileName();
-		}
-		else
-			return NULL;
-	}
+    CString location;
+    CString formName;
+    if(makeFromTemplate)
+    {
+        CFormType formType;
+        if(formType.DoModal()==IDOK)
+        {
+            formFileName=formType.GetComponentType();
+            location = formType.GetLocation();
+            formName = formType.GetFormName();
+            formfilename = formType.GetFileName();
+        }
+        else
+            return NULL;
+    }
+    
+    if(PreReadForm(formFileName,page,cmpName)==FALSE)
+    {	
+        ::MessageBox(NULL,MakeString(_T("Error loading form file %s."),(LPCTSTR)formFileName),_T("WTLBuilder"),MB_OK);
+        return NULL;
+    }
+    
+    CWaitCursor wc;
 
-	if (PreReadForm(formFileName, page, cmpName) == FALSE)
-	{
-		::MessageBox(NULL, MakeString(_T("Error loading form file %s."), (LPCTSTR)formFileName), _T("WTL Builder"), MB_OK);
-		return NULL;
-	}
+    Component * form=NULL;
+    SendEvent(evCreateComponent,(LPCTSTR)cmpName,(LPCTSTR)page,&form);
+    if(form)
+    {
+        form->set_UniqueID(forms.get_Count());
+        form->InitProperty();
+        SendEvent(evLoadForm,mainForm,&form,(LPCTSTR)formFileName,makeFromTemplate);
+        form->set_Name(formName);
+        if(location[location.GetLength()-1] != _T('\\'))
+            location += _T('\\');
+        _mkdir(location);
+        CString resLocation(location);
+        resLocation+=_T("res");
+        _mkdir(resLocation);
+        location = location+formfilename+_T(".wff");
+        SendEvent(evSetFormFileName,form,(LPCTSTR)location);
 
-	CWaitCursor wc;
+        CPath templateFile(formFileName);
+        templateFile.SetExt("js");
+        SendEvent(evLoadScriptFromFile, (LPCSTR)templateFile);
+        SendEvent(evSaveForm, form, FALSE);
+    }
+    else
+    {
+        SendEvent(evOutput, ErrorMsg, (LPCSTR)MakeString(_T("Component Page = %s, Name = %s not found."), (LPCTSTR)page, (LPCTSTR)cmpName));
+    }
 
-	Component * form = NULL;
-	SendEvent(evCreateComponent, (LPCTSTR)cmpName, (LPCTSTR)page, &form);
-	if (form)
-	{
-		form->set_UniqueID(forms.get_Count());
-		form->InitProperty();
-		SendEvent(evLoadForm, mainForm, &form, (LPCTSTR)formFileName, makeFromTemplate);
-		form->set_Name(formName);
-		if (location[location.GetLength() - 1] != _T('\\'))
-			location += _T('\\');
-		_mkdir(location);
-		CString resLocation(location);
-		resLocation += _T("res");
-		_mkdir(resLocation);
-		location = location + formfilename + _T(".wff");
-		SendEvent(evSetFormFileName, form, (LPCTSTR)location);
-
-		CPath templateFile(formFileName);
-		templateFile.SetExt("js");
-		SendEvent(evLoadScriptFromFile, (LPCSTR)templateFile);
-		SendEvent(evSaveForm, form, FALSE);
-	}
-	else
-	{
-		SendEvent(evOutput, ErrorMsg, (LPCSTR)MakeString(_T("Component Page = %s, Name = %s not found."), (LPCTSTR)page, (LPCTSTR)cmpName));
-	}
-
-	return form;
+    return form;
 }
 
 void __stdcall CProject::Save()
