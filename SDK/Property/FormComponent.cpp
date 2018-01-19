@@ -422,7 +422,6 @@ void CFormComponent::InitProperty(void)
 
         DEFINE_PROPERTY(BaseCtrlID, long, CFormComponent, 1000)
         //DEFINE_PROPERTY(WndClient,ComponentName,CFormComponent,_T("NULL"))
->>>>>>> 8cf1d8a4d7babcc338a7af178118d1792b8a7c11
 //		DEFINE_PROPERTY(WndToolBar,ComponentName,CFormComponent,_T("NULL"))
 //		DEFINE_PROPERTY(WndStatusBar,ComponentName,CFormComponent,_T("NULL"))
 		//DEFINE_PROPERTY(Menu,ComponentName,CFormComponent,_T("NULL"))
