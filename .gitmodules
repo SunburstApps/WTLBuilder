@@ -1,3 +1,0 @@
-[submodule "AppxPackage/AppxPackaging"]
-	path = AppxPackage/AppxPackaging
-	url = https://github.com/SunburstApps/AppxPackaging

@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{1D589EED-3287-4B38-8BF6-FCAC355A2C10}"
 	ProjectSection(SolutionItems) = preProject
@@ -187,16 +187,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StdCtrl", "Components\StdCt
 		{657E60F5-4BC0-4765-B6C0-94B944DEB8A0} = {657E60F5-4BC0-4765-B6C0-94B944DEB8A0}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppX Package", "AppX Package", "{05535C7B-10C4-4EDC-BA2E-3368F24AB093}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WTLBuilder.AppxPackage", "AppxPackage\WTLBuilder.AppxPackage.vcxproj", "{AB7DD243-E352-41D9-BB45-42E80803FE4E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{CED269A2-9C9F-4798-9D67-22B5DBD5DF8B} = {CED269A2-9C9F-4798-9D67-22B5DBD5DF8B}
-		{736745DC-6341-4C09-AD49-1B988674C54E} = {736745DC-6341-4C09-AD49-1B988674C54E}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sunburst.AppxPackaging.Tasks", "AppxPackage\AppxPackaging\Sunburst.AppxPackaging.Tasks\Sunburst.AppxPackaging.Tasks.csproj", "{736745DC-6341-4C09-AD49-1B988674C54E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -287,28 +277,6 @@ Global
 		{D8E484B5-2C56-4A69-A8E1-5CE887C69904}.Release|Win32.ActiveCfg = Release|Win32
 		{D8E484B5-2C56-4A69-A8E1-5CE887C69904}.Release|Win32.Build.0 = Release|Win32
 		{D8E484B5-2C56-4A69-A8E1-5CE887C69904}.Release|x64.ActiveCfg = Release|Win32
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Debug|Win32.ActiveCfg = Debug|Win32
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Debug|Win32.Build.0 = Debug|Win32
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Debug|x64.ActiveCfg = Debug|x64
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Debug|x64.Build.0 = Debug|x64
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Release|Any CPU.ActiveCfg = Release|Win32
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Release|Win32.ActiveCfg = Release|Win32
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Release|Win32.Build.0 = Release|Win32
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Release|x64.ActiveCfg = Release|x64
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E}.Release|x64.Build.0 = Release|x64
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Debug|Win32.Build.0 = Debug|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Debug|x64.Build.0 = Debug|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Release|Win32.ActiveCfg = Release|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Release|Win32.Build.0 = Release|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Release|x64.ActiveCfg = Release|Any CPU
-		{736745DC-6341-4C09-AD49-1B988674C54E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -333,8 +301,9 @@ Global
 		{BA53825D-79E6-4179-A3D8-4ED410EA966D} = {5D3FC03D-DF7A-42B6-9E7F-FD90748FF7AA}
 		{BB313C75-0D87-4125-A7F3-D534472995B9} = {5AE638EF-D9C0-463E-A4E6-9FB6EA950B8D}
 		{D8E484B5-2C56-4A69-A8E1-5CE887C69904} = {5D3FC03D-DF7A-42B6-9E7F-FD90748FF7AA}
-		{AB7DD243-E352-41D9-BB45-42E80803FE4E} = {05535C7B-10C4-4EDC-BA2E-3368F24AB093}
-		{736745DC-6341-4C09-AD49-1B988674C54E} = {05535C7B-10C4-4EDC-BA2E-3368F24AB093}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1A859D2-95D9-447A-A80C-219C71C0E88F}
 	EndGlobalSection
 	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
 		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
