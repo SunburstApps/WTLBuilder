@@ -48,6 +48,418 @@
     <None Include="AppxPackage_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\Bin\Package\DecorativeCtrl.dll">
+      <Link>WTLBuilder\Package\DecorativeCtrl.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Package\Form.dll">
+      <Link>WTLBuilder\Package\Form.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Package\StdCtrl.dll">
+      <Link>WTLBuilder\Package\StdCtrl.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Package\ViksoeCtrl.dll">
+      <Link>WTLBuilder\Package\ViksoeCtrl.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Package\WTLBuilderCtrl.dll">
+      <Link>WTLBuilder\Package\WTLBuilderCtrl.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CAnimateCtrl.js">
+      <Link>WTLBuilder\Script\CAnimateCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CButton.js">
+      <Link>WTLBuilder\Script\CButton.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CButtonST.js">
+      <Link>WTLBuilder\Script\CButtonST.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CCalculatorEdit.js">
+      <Link>WTLBuilder\Script\CCalculatorEdit.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CComboBox.js">
+      <Link>WTLBuilder\Script\CComboBox.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CDateTimePickerCtrl.js">
+      <Link>WTLBuilder\Script\CDateTimePickerCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CDialogImpl.js">
+      <Link>WTLBuilder\Script\CDialogImpl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CEdit.js">
+      <Link>WTLBuilder\Script\CEdit.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CEditListBox.js">
+      <Link>WTLBuilder\Script\CEditListBox.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CFrameWindowImpl.js">
+      <Link>WTLBuilder\Script\CFrameWindowImpl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CGridCtrl.js">
+      <Link>WTLBuilder\Script\CGridCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CHeaderCtrl.js">
+      <Link>WTLBuilder\Script\CHeaderCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\checkProperty.js">
+      <Link>WTLBuilder\Script\checkProperty.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CHotKeyCtrl.js">
+      <Link>WTLBuilder\Script\CHotKeyCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CHyperLink.js">
+      <Link>WTLBuilder\Script\CHyperLink.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CImageList.js">
+      <Link>WTLBuilder\Script\CImageList.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CImageListView.js">
+      <Link>WTLBuilder\Script\CImageListView.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CListBox.js">
+      <Link>WTLBuilder\Script\CListBox.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CListViewCtrl.js">
+      <Link>WTLBuilder\Script\CListViewCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CMaskEdit.js">
+      <Link>WTLBuilder\Script\CMaskEdit.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CMDIChildWindowImpl.js">
+      <Link>WTLBuilder\Script\CMDIChildWindowImpl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CMDIFrameWindowImpl.js">
+      <Link>WTLBuilder\Script\CMDIFrameWindowImpl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CMenu.js">
+      <Link>WTLBuilder\Script\CMenu.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\ColorButton.js">
+      <Link>WTLBuilder\Script\ColorButton.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CPaneContainer.js">
+      <Link>WTLBuilder\Script\CPaneContainer.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CPanel.js">
+      <Link>WTLBuilder\Script\CPanel.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CProgressBarCtrl.js">
+      <Link>WTLBuilder\Script\CProgressBarCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CPropertyGrid.js">
+      <Link>WTLBuilder\Script\CPropertyGrid.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CPropertyList.js">
+      <Link>WTLBuilder\Script\CPropertyList.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CRichEditCtrl.js">
+      <Link>WTLBuilder\Script\CRichEditCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CScrollBar.js">
+      <Link>WTLBuilder\Script\CScrollBar.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CShellComboCtrl.js">
+      <Link>WTLBuilder\Script\CShellComboCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CShellListCtrl.js">
+      <Link>WTLBuilder\Script\CShellListCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CShellTreeCtrl.js">
+      <Link>WTLBuilder\Script\CShellTreeCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CSortListViewCtrl.js">
+      <Link>WTLBuilder\Script\CSortListViewCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CSplitterWindow.js">
+      <Link>WTLBuilder\Script\CSplitterWindow.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CStatic.js">
+      <Link>WTLBuilder\Script\CStatic.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CStatusBarCtrl.js">
+      <Link>WTLBuilder\Script\CStatusBarCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CStripedListView.js">
+      <Link>WTLBuilder\Script\CStripedListView.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CTabCtrl.js">
+      <Link>WTLBuilder\Script\CTabCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CToolBarCtrl.js">
+      <Link>WTLBuilder\Script\CToolBarCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CToolPanel.js">
+      <Link>WTLBuilder\Script\CToolPanel.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CTrackbarCtrl.js">
+      <Link>WTLBuilder\Script\CTrackbarCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CTreeListView.js">
+      <Link>WTLBuilder\Script\CTreeListView.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CTreeViewCtrl.js">
+      <Link>WTLBuilder\Script\CTreeViewCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CUpDownCtrl.js">
+      <Link>WTLBuilder\Script\CUpDownCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CWindow.js">
+      <Link>WTLBuilder\Script\CWindow.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CWindowImpl.js">
+      <Link>WTLBuilder\Script\CWindowImpl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\CWtlEditBrowserCtrl.js">
+      <Link>WTLBuilder\Script\CWtlEditBrowserCtrl.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\LangID.js">
+      <Link>WTLBuilder\Script\LangID.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\Layout.js">
+      <Link>WTLBuilder\Script\Layout.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\rulers.js">
+      <Link>WTLBuilder\Script\rulers.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\SplitterBar.js">
+      <Link>WTLBuilder\Script\SplitterBar.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\Util.js">
+      <Link>WTLBuilder\Script\Util.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\WindowClass.js">
+      <Link>WTLBuilder\Script\WindowClass.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Script\WindowStyles.js">
+      <Link>WTLBuilder\Script\WindowStyles.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CDialogImpl\CDialogImpl.bmp">
+      <Link>WTLBuilder\Template\CDialogImpl\CDialogImpl.bmp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CDialogImpl\CDialogImpl.cpp">
+      <Link>WTLBuilder\Template\CDialogImpl\CDialogImpl.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CDialogImpl\CDialogImpl.h">
+      <Link>WTLBuilder\Template\CDialogImpl\CDialogImpl.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CDialogImpl\CDialogImpl.wff">
+      <Link>WTLBuilder\Template\CDialogImpl\CDialogImpl.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CDialogTemplate\CDialogTemplate.bmp">
+      <Link>WTLBuilder\Template\CDialogTemplate\CDialogTemplate.bmp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CDialogTemplate\CDialogTemplate.cpp">
+      <Link>WTLBuilder\Template\CDialogTemplate\CDialogTemplate.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CDialogTemplate\CDialogTemplate.h">
+      <Link>WTLBuilder\Template\CDialogTemplate\CDialogTemplate.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CDialogTemplate\CDialogTemplate.wff">
+      <Link>WTLBuilder\Template\CDialogTemplate\CDialogTemplate.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CFrameWindowImpl\CFrameWindowImpl.cpp">
+      <Link>WTLBuilder\Template\CFrameWindowImpl\CFrameWindowImpl.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CFrameWindowImpl\CFrameWindowImpl.h">
+      <Link>WTLBuilder\Template\CFrameWindowImpl\CFrameWindowImpl.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CFrameWindowImpl\CFrameWindowImpl.ico">
+      <Link>WTLBuilder\Template\CFrameWindowImpl\CFrameWindowImpl.ico</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CFrameWindowImpl\CFrameWindowImpl.wff">
+      <Link>WTLBuilder\Template\CFrameWindowImpl\CFrameWindowImpl.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMainFrame\CMainFrame.cpp">
+      <Link>WTLBuilder\Template\CMainFrame\CMainFrame.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMainFrame\CMainFrame.h">
+      <Link>WTLBuilder\Template\CMainFrame\CMainFrame.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMainFrame\CMainFrame.ico">
+      <Link>WTLBuilder\Template\CMainFrame\CMainFrame.ico</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMainFrame\CMainFrame.wff">
+      <Link>WTLBuilder\Template\CMainFrame\CMainFrame.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMDIChildWindowImpl\CMDIChildWindowImpl.cpp">
+      <Link>WTLBuilder\Template\CMDIChildWindowImpl\CMDIChildWindowImpl.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMDIChildWindowImpl\CMDIChildWindowImpl.h">
+      <Link>WTLBuilder\Template\CMDIChildWindowImpl\CMDIChildWindowImpl.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMDIChildWindowImpl\CMDIChildWindowImpl.ico">
+      <Link>WTLBuilder\Template\CMDIChildWindowImpl\CMDIChildWindowImpl.ico</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMDIChildWindowImpl\CMDIChildWindowImpl.wff">
+      <Link>WTLBuilder\Template\CMDIChildWindowImpl\CMDIChildWindowImpl.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMDIFrameWindowImpl\CMDIFrameWindowImpl.cpp">
+      <Link>WTLBuilder\Template\CMDIFrameWindowImpl\CMDIFrameWindowImpl.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMDIFrameWindowImpl\CMDIFrameWindowImpl.h">
+      <Link>WTLBuilder\Template\CMDIFrameWindowImpl\CMDIFrameWindowImpl.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMDIFrameWindowImpl\CMDIFrameWindowImpl.ico">
+      <Link>WTLBuilder\Template\CMDIFrameWindowImpl\CMDIFrameWindowImpl.ico</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CMDIFrameWindowImpl\CMDIFrameWindowImpl.wff">
+      <Link>WTLBuilder\Template\CMDIFrameWindowImpl\CMDIFrameWindowImpl.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\COptionsDlg\COptionsDlg.cpp">
+      <Link>WTLBuilder\Template\COptionsDlg\COptionsDlg.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\COptionsDlg\COptionsDlg.h">
+      <Link>WTLBuilder\Template\COptionsDlg\COptionsDlg.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\COptionsDlg\COptionsDlg.wff">
+      <Link>WTLBuilder\Template\COptionsDlg\COptionsDlg.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CPagesEdit\CPagesEdit.cpp">
+      <Link>WTLBuilder\Template\CPagesEdit\CPagesEdit.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CPagesEdit\CPagesEdit.h">
+      <Link>WTLBuilder\Template\CPagesEdit\CPagesEdit.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CPagesEdit\CPagesEdit.wff">
+      <Link>WTLBuilder\Template\CPagesEdit\CPagesEdit.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CSplashWnd\csplashwnd.cpp">
+      <Link>WTLBuilder\Template\CSplashWnd\csplashwnd.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CSplashWnd\csplashwnd.h">
+      <Link>WTLBuilder\Template\CSplashWnd\csplashwnd.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CSplashWnd\csplashwnd.ico">
+      <Link>WTLBuilder\Template\CSplashWnd\csplashwnd.ico</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CSplashWnd\csplashwnd.js">
+      <Link>WTLBuilder\Template\CSplashWnd\csplashwnd.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CSplashWnd\csplashwnd.wff">
+      <Link>WTLBuilder\Template\CSplashWnd\csplashwnd.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CStringsEdit\CStringsEdit.cpp">
+      <Link>WTLBuilder\Template\CStringsEdit\CStringsEdit.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CStringsEdit\CStringsEdit.h">
+      <Link>WTLBuilder\Template\CStringsEdit\CStringsEdit.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CStringsEdit\CStringsEdit.wff">
+      <Link>WTLBuilder\Template\CStringsEdit\CStringsEdit.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CWindowImpl\CWindowImpl.cpp">
+      <Link>WTLBuilder\Template\CWindowImpl\CWindowImpl.cpp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CWindowImpl\CWindowImpl.h">
+      <Link>WTLBuilder\Template\CWindowImpl\CWindowImpl.h</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CWindowImpl\CWindowImpl.ico">
+      <Link>WTLBuilder\Template\CWindowImpl\CWindowImpl.ico</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Bin\Template\CWindowImpl\CWindowImpl.wff">
+      <Link>WTLBuilder\Template\CWindowImpl\CWindowImpl.wff</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
@@ -96,6 +508,21 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WTLBuilder.vcxproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WTLBuilder\Package\" />
+    <Folder Include="WTLBuilder\Script\" />
+    <Folder Include="WTLBuilder\Template\CDialogImpl\" />
+    <Folder Include="WTLBuilder\Template\CDialogTemplate\" />
+    <Folder Include="WTLBuilder\Template\CFrameWindowImpl\" />
+    <Folder Include="WTLBuilder\Template\CMainFrame\" />
+    <Folder Include="WTLBuilder\Template\CMDIChildWindowImpl\" />
+    <Folder Include="WTLBuilder\Template\CMDIFrameWindowImpl\" />
+    <Folder Include="WTLBuilder\Template\COptionsDlg\" />
+    <Folder Include="WTLBuilder\Template\CPagesEdit\" />
+    <Folder Include="WTLBuilder\Template\CSplashWnd\" />
+    <Folder Include="WTLBuilder\Template\CStringsEdit\" />
+    <Folder Include="WTLBuilder\Template\CWindowImpl\" />
   </ItemGroup>
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
 </Project>
