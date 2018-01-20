@@ -29,6 +29,9 @@
             <uap:SupportedFileTypes>
               <uap:FileType>.wff</uap:FileType>
             </uap:SupportedFileTypes>
+            <uap4:KindMap>
+              <uap4:Kind Value="document"/>
+            </uap4:KindMap>
           </uap:FileTypeAssociation>
         </uap:Extension>
       </Extensions>
