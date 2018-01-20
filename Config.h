@@ -4,7 +4,7 @@
 
 class CConfig
 {
-    CIni cfgFile;
+    CRegKey key;
 public:
     CConfig();
     ~CConfig();
