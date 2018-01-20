@@ -179,6 +179,8 @@ BEGIN
         MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR, INACTIVE
         MENUITEM SEPARATOR
         MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL, INACTIVE
+        MENUITEM SEPARATOR
+        MENUITEM "P&references...",             ID_OPTIONS_OPTIONS
     END
     POPUP "&View"
     BEGIN
