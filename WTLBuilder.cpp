@@ -12,7 +12,6 @@
 #include "MainFrm.h"
 #include "ModuleLoader.h"
 #include "Path.h"
-#include "cgfiltyp.h"
 #include <appmodel.h>
 
 CAppModule _Module;
@@ -171,35 +170,4 @@ BOOL isMSXMLInstalled()
 	{
 	}
 	return FALSE;
-}
-
-
-void RegisterWFF()
-{
-
-	CGCFileTypeAccess fta;
-
-	// get full file path to program executable file
-	TCHAR	szProgPath[MAX_PATH * 2];
-	::GetModuleFileName(NULL, szProgPath, sizeof(szProgPath) / sizeof(TCHAR));
-
-	CString csTempText;
-
-	fta.SetExtension(_T("wff"));
-
-	// just pass file path in quotes on command line
-	csTempText = szProgPath;
-	csTempText += _T(" \"%1\"");
-	fta.SetShellOpenCommand(csTempText);
-	fta.SetDocumentShellOpenCommand(csTempText);
-	fta.SetDocumentClassName(_T("WTLBuilder.Document"));
-	fta.SetDocumentDescription(_T("WTLBuilder Form File"));
-
-	// use first icon in program
-	csTempText = szProgPath;
-	csTempText += ",0";
-	fta.SetDocumentDefaultIcon(csTempText);
-
-	// set the necessary registry entries	
-	fta.RegSetAllInfo();
 }

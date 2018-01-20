@@ -4,9 +4,6 @@
     <ClCompile Include="aboutdlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cgfiltyp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CScriptEditor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -52,9 +49,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="aboutdlg.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cgfiltyp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CScriptEditor.h">
