@@ -34,12 +34,12 @@ void CConfig::GetBOOLValue(LPCTSTR section, LPCTSTR key, BOOL *val)
         *val = cfgFile.GetBool(section, key, FALSE);
 }
 
-void CConfig::SetINTValue(LPCTSTR section, LPCTSTR key, BOOL val)
+void CConfig::SetINTValue(LPCTSTR section, LPCTSTR key, int val)
 {
     cfgFile.WriteInt(section, key, val);
 }
 
-void CConfig::GetINTValue(LPCTSTR section, LPCTSTR key, BOOL *val)
+void CConfig::GetINTValue(LPCTSTR section, LPCTSTR key, int *val)
 {
     if (val != NULL)
         *val = cfgFile.GetInt(section, key, 0);
