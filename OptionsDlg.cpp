@@ -82,6 +82,10 @@ LRESULT COptionsDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lPa
     CenterWindow();
     DefineLayout();
 
+    BOOL checked = FALSE;
+    PostEvent(evCfgGetBOOLVal, _T("Code Generation"), _T("m_Prefix"), &checked, (UINT)SEND_METHOD);
+    m_add_m_prefix.SetCheck(checked ? BST_CHECKED : BST_UNCHECKED);
+
     return TRUE;
 }
 
