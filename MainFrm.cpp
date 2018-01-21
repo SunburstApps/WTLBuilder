@@ -15,7 +15,7 @@
 #include "OptionsDlg.h"
 
 
-const TCHAR* const WTLBuilderRegKey = _T("Software\\WTLBuilder");
+const TCHAR* const WTLBuilderRegKey = _T("Software\\WTL Builder");
 
 #define FILE_MENU_POSITION 0
 #define RECENT_MENU_POSITION 11
