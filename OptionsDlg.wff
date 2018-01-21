@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Form Page="Form" Class="CDialogImpl" AcceptFiles="false" AppWindow="false" BaseCtrlID="1000" BorderStyle="WS_DLGFRAME" Caption="Options" CaptionBar="true" ClientEdge="false" ClientHeight="449" ClientWidth="602" ClipChildren="false" ClipSiblings="true" Color="COLOR_BTNFACE" ContextHelp="false" ControlParent="false" EnableLayout="false" GSGuides="false" Generate="true" Grid="true" HScroll="false" Height="487" InternalWindowStyle="348848128" InternalWindowStyleEx="256" Left="373" Localize="false" MaximizeBox="true" MinimizeBox="true" ModalFrame="false" Name="COptionsDlg" ParentName="m_hWnd" ShowWindow="true" StaticEdge="false" SysMenu="true" ToolWindow="false" Top="234" TopMost="false" Transparent="false" UniqueID="0" VScroll="false" Visible="false" Width="618" WindowClassStyle="11" WindowEdge="true" WindowStyle="WS_OVERLAPPED">
+<Form Page="Form" Class="CDialogImpl" AcceptFiles="false" AppWindow="false" BaseCtrlID="1000" BorderStyle="WS_DLGFRAME" Caption="Options" CaptionBar="true" ClientEdge="false" ClientHeight="448" ClientWidth="602" ClipChildren="false" ClipSiblings="true" Color="COLOR_BTNFACE" ContextHelp="false" ControlParent="false" EnableLayout="false" GSGuides="false" Generate="true" Grid="true" HScroll="false" Height="487" InternalWindowStyle="348651520" InternalWindowStyleEx="256" Left="373" Localize="false" MaximizeBox="false" MinimizeBox="false" ModalFrame="false" Name="COptionsDlg" ParentName="m_hWnd" ShowWindow="true" StaticEdge="false" SysMenu="true" ToolWindow="false" Top="234" TopMost="false" Transparent="false" UniqueID="0" VScroll="false" Visible="false" Width="618" WindowClassStyle="11" WindowEdge="true" WindowStyle="WS_OVERLAPPED">
 	<EnableLayout ShowHandle="false" NPositions="1"/>
 	<Font Height="-12" Bold="false" Italic="false" Underline="false" StrikeOut="false" CharSet="DEFAULT_CHARSET" FaceName="MS Sans Serif"/>
 	<GSGuides FromLeftToRight="true" FromTopToBottom="true" Moveable="false" OffsetX="0" OffsetY="0"/>
@@ -86,7 +86,7 @@
 			</Layout>
 			<RoundCorners x="0" y="0"/>
 		</codeGeneration>
-		<m_add_m_prefix Page="StdCtl" Class="CCheckBox" AcceptFiles="false" Border="false" Caption="Add m_ prefix to member name" Check="Checked" CheckBoxStyle="AutoCheckBox" ClientEdge="false" ClipChildren="true" ClipSiblings="true" ControlParent="false" DoContained="false" EnableToolTip="false" Enabled="true" FirstSelected="true" Flat="true" Focus="false" Font="false" Generate="true" Group="false" HScroll="false" Height="24" HorizAlign="BS_LEFT" ID="ID_ADD_M_PREFIX" IncludePath="" InternalWindowStyle="1442942211" InternalWindowStyleEx="0" Layout="false" Left="8" LeftText="false" Localize="true" MultiLine="false" Name="m_add_m_prefix" Notify="false" ParentName="codeGeneration" Selected="true" Style="BS_TEXT" TabIndex="2" TabStop="true" ToolTip="" Top="8" Transparent="false" UniqueID="7" VScroll="false" VertAlign="BS_VCENTER" Visible="true" Width="184">
+		<m_add_m_prefix Page="StdCtl" Class="CCheckBox" AcceptFiles="false" Border="false" Caption="Add m_ prefix to member name" Check="Checked" CheckBoxStyle="AutoCheckBox" ClientEdge="false" ClipChildren="true" ClipSiblings="true" ControlParent="false" DoContained="false" EnableToolTip="false" Enabled="true" FirstSelected="false" Flat="true" Focus="false" Font="false" Generate="true" Group="false" HScroll="false" Height="24" HorizAlign="BS_LEFT" ID="ID_ADD_M_PREFIX" IncludePath="" InternalWindowStyle="1442942211" InternalWindowStyleEx="0" Layout="false" Left="8" LeftText="false" Localize="true" MultiLine="false" Name="m_add_m_prefix" Notify="false" ParentName="codeGeneration" Selected="false" Style="BS_TEXT" TabIndex="2" TabStop="true" ToolTip="" Top="8" Transparent="false" UniqueID="7" VScroll="false" VertAlign="BS_VCENTER" Visible="true" Width="184">
 			<DoContained MessageMapID="0"/>
 			<Font Height="-12" Bold="false" Italic="false" Underline="false" StrikeOut="false" CharSet="DEFAULT_CHARSET" FaceName="MS Sans Serif"/>
 			<Image FileName="" ID="" ImageType="None" Width="0" Height="0"/>
@@ -99,5 +99,18 @@
 				<VCenter AttachForm="false" AttachOppositeForm="false" AttachChild="false" AttachOppositeChild="false" AttachPosition="false" AttachSelf="false" AttachNone="false" Child="None" Position="0"/>
 			</Layout>
 		</m_add_m_prefix>
+		<m_clear_mru_checkbox Page="StdCtl" Class="CCheckBox" AcceptFiles="false" Border="false" Caption="Clear &amp;recent files list" Check="UnChecked" CheckBoxStyle="AutoCheckBox" ClientEdge="false" ClipChildren="true" ClipSiblings="true" ControlParent="false" DoContained="false" EnableToolTip="false" Enabled="true" FirstSelected="true" Flat="false" Focus="false" Font="false" Generate="true" Group="false" HScroll="false" Height="24" HorizAlign="BS_LEFT" ID="ID_CLEAR_MRU_CHECKBOX" IncludePath="" InternalWindowStyle="1442909443" InternalWindowStyleEx="0" Layout="false" Left="8" LeftText="false" Localize="true" MultiLine="false" Name="m_clear_mru_checkbox" Notify="false" ParentName="codeGeneration" Selected="true" Style="BS_TEXT" TabIndex="6" TabStop="true" ToolTip="" Top="32" Transparent="false" UniqueID="8" VScroll="false" VertAlign="BS_VCENTER" Visible="true" Width="184">
+			<DoContained MessageMapID="0"/>
+			<Font Height="-12" Bold="false" Italic="false" Underline="false" StrikeOut="false" CharSet="DEFAULT_CHARSET" FaceName="MS Sans Serif"/>
+			<Image FileName="" ID="" ImageType="None" Width="0" Height="0"/>
+			<Layout>
+				<Left AttachForm="false" AttachOppositeForm="false" AttachChild="false" AttachOppositeChild="false" AttachPosition="false" AttachSelf="false" AttachNone="false" Child="None" Position="0"/>
+				<Top AttachForm="false" AttachOppositeForm="false" AttachChild="false" AttachOppositeChild="false" AttachPosition="false" AttachSelf="false" AttachNone="false" Child="None" Position="0"/>
+				<Right AttachForm="false" AttachOppositeForm="false" AttachChild="false" AttachOppositeChild="false" AttachPosition="false" AttachSelf="false" AttachNone="false" Child="None" Position="0"/>
+				<Bottom AttachForm="false" AttachOppositeForm="false" AttachChild="false" AttachOppositeChild="false" AttachPosition="false" AttachSelf="false" AttachNone="false" Child="None" Position="0"/>
+				<HCenter AttachForm="false" AttachOppositeForm="false" AttachChild="false" AttachOppositeChild="false" AttachPosition="false" AttachSelf="false" AttachNone="false" Child="None" Position="0"/>
+				<VCenter AttachForm="false" AttachOppositeForm="false" AttachChild="false" AttachOppositeChild="false" AttachPosition="false" AttachSelf="false" AttachNone="false" Child="None" Position="0"/>
+			</Layout>
+		</m_clear_mru_checkbox>
 	</Controls>
 </Form>

@@ -26,8 +26,8 @@ LRESULT COptionsDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lPa
 //{{WTLBUILDER_MEMBER_CREATION
     m_formFont.CreateFont(-12,0,0,0,FW_NORMAL,false,false,false,DEFAULT_CHARSET,OUT_DEFAULT_PRECIS,CLIP_DEFAULT_PRECIS,DEFAULT_QUALITY,DEFAULT_PITCH|FF_DONTCARE,_T("MS Sans Serif"));
     SetFont((HFONT)m_formFont);
-    ModifyStyle(GetStyle(),WS_OVERLAPPED|WS_CLIPSIBLINGS|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX|WS_MAXIMIZEBOX);
-    ResizeClient(602,449);
+    ModifyStyle(GetStyle(),WS_OVERLAPPED|WS_CLIPSIBLINGS|WS_CAPTION|WS_SYSMENU);
+    ResizeClient(602,448);
     SetWindowText(_T("Options"));
 
     m_ok.Create(m_hWnd,CRect(433,416,507,438),_T("OK"),WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON|BS_TEXT|BS_CENTER|BS_VCENTER,0,IDOK);
@@ -38,7 +38,7 @@ LRESULT COptionsDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lPa
 
     m_optListbox.Create(m_hWnd,CRect(8,8,192,396),NULL,WS_CHILD|WS_VISIBLE|WS_CLIPSIBLINGS|WS_CLIPCHILDREN|WS_TABSTOP|LBS_NOTIFY,WS_EX_CLIENTEDGE,IDC_OPTLISTBOX);
     m_optListbox.SetFont((HFONT)m_formFont);
-    m_optListbox.AddString(_T("Code generation"));
+    m_optListbox.AddString(_T("General"));
     m_optListbox.SetItemHeight(0,13);
     m_optListbox.SetHorizontalExtent(40);
 
@@ -75,11 +75,14 @@ LRESULT COptionsDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lPa
     m_add_m_prefix.Create(codeGeneration,CRect(8,8,192,32),_T("Add m_ prefix to member name"),WS_CHILD|WS_VISIBLE|WS_CLIPSIBLINGS|WS_CLIPCHILDREN|WS_TABSTOP|BS_AUTOCHECKBOX|BS_TEXT|BS_LEFT|BS_VCENTER|BS_FLAT,0,ID_ADD_M_PREFIX);
     m_add_m_prefix.SetFont((HFONT)m_formFont);
 
+    m_clear_mru_checkbox.Create(codeGeneration,CRect(8,32,192,56),_T("Clear &recent files list"),WS_CHILD|WS_VISIBLE|WS_CLIPSIBLINGS|WS_CLIPCHILDREN|WS_TABSTOP|BS_AUTOCHECKBOX|BS_TEXT|BS_LEFT|BS_VCENTER,0,ID_CLEAR_MRU_CHECKBOX);
+    m_clear_mru_checkbox.SetFont((HFONT)m_formFont);
+
 //}}WTLBUILDER_MEMBER_CREATION
 //{{WTLBUILDER_POST_CREATION
     m_panelhost.SetCurrent(&codeGeneration);
 //}}WTLBUILDER_POST_CREATION
-    CenterWindow();
+    CenterWindow(::GetDesktopWindow());
     DefineLayout();
 
     BOOL checked = FALSE;
@@ -118,7 +121,21 @@ LRESULT COptionsDlg::OnListBoxChange(WORD wNotifyCode, WORD wID, HWND hWndCtl, B
 LRESULT COptionsDlg::OnM_Prefix(WORD /*wNotifyCode*/, WORD wID, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
 {
     int ch=m_add_m_prefix.GetCheck();
-    PostEvent(evCfgSetBOOLVal, _T("Code Generation"), _T("m_Prefix"), ch == BST_CHECKED ? TRUE: FALSE);
+    PendingChanges.ApplyMPrefix = (ch == BST_CHECKED);
 
     return 0;
+}
+
+LRESULT COptionsDlg::OnClearMruCheckbox(WORD, WORD, HWND, BOOL&)
+{
+    bool checked = m_clear_mru_checkbox.GetCheck() == BST_CHECKED;
+    PendingChanges.ClearMru = checked;
+
+    return 0;
+}
+
+void COptionsDlg::ApplyChanges()
+{
+    PostEvent(evCfgSetBOOLVal, _T("Code Generation"), _T("m_Prefix"), PendingChanges.ApplyMPrefix ? TRUE : FALSE);
+    if (PendingChanges.ClearMru) PostEvent(evClearMru);
 }

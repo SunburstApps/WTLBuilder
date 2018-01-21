@@ -165,6 +165,7 @@ class CMainFrame : public CFrameWindowImpl<CMainFrame, CWindow, CMainFrameWinTra
 	void OnEditCommand(WORD wID, Component *comp, CPoint *);
 	void SetActiveForm(Component *form);
 	void LoadScriptFromFile(LPCSTR);
+	void ClearMru(void);
 public:
 	virtual void GetDialogRect(LPRECT r);
 	virtual void GetOffset(LPPOINT offset);

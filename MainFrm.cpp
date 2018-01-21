@@ -48,6 +48,7 @@ CMainFrame::CMainFrame(void) :project(this), enableUndo(FALSE), userMenuCount(MI
 	RegisterEvent(evUndo, this, &CMainFrame::SetActiveForm);
 	RegisterEvent(evLoadScriptFromFile, this, &CMainFrame::LoadScriptFromFile);
 	RegisterEvent(evXYCursor, this, &CMainFrame::XYCursor);
+	RegisterEvent(evClearMru, this, &CMainFrame::ClearMru);
 }
 
 CMainFrame::~CMainFrame(void)
@@ -787,7 +788,8 @@ LRESULT CMainFrame::OnGenerateLocFile(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /
 LRESULT CMainFrame::OnOptions(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
 {
 	COptionsDlg dlg;
-	dlg.DoModal(::GetDesktopWindow());
+	int result = dlg.DoModal();
+	if (result == IDOK) dlg.ApplyChanges();
 	return 0;
 }
 
@@ -1140,4 +1142,11 @@ void CMainFrame::XYCursor(CPoint pt)
 	m_XCursor.SetWindowText(str);
 	str.Format("%d", pt.y);
 	m_YCursor.SetWindowText(str);
+}
+
+void CMainFrame::ClearMru(void)
+{
+	mru.m_arrDocs.RemoveAll();
+	mru.WriteToRegistry(WTLBuilderRegKey);
+	mru.UpdateMenu();
 }

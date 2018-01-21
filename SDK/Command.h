@@ -85,7 +85,8 @@ enum Commands
     evCfgSetINTVal,//const TCHAR * name, int val
     evCfgGetINTVal,//const TCHAR * name, int *val
     evCfgSetSTRVal,//const TCHAR * name, const TCHAR * val
-    evCfgGetSTRVal//const TCHAR * name, const TCHAR * val, int vlaSize
+    evCfgGetSTRVal,//const TCHAR * name, const TCHAR * val, int vlaSize
+    evClearMru//(void)
 };
 
 //for evOutput message

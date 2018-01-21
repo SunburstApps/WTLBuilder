@@ -14,6 +14,7 @@
 #define    IDC_COPTIONSDLG_PANEL10    1010
 #define    IDC_COPTIONSDLG_CODEGENERATION    1011
 #define    ID_ADD_M_PREFIX    1007
+#define    ID_CLEAR_MRU_CHECKBOX    1012
 //}}WTLBUILDER_CONTROL_ID_DECLARATION
 
 //typedef std::vector<>
@@ -32,9 +33,17 @@ class COptionsDlg:public CResizableDialogImpl<COptionsDlg>
     Panel::CPanel    m_panel10;
     Panel::CPanel    codeGeneration;
     CButton    m_add_m_prefix;
+    CButton    m_clear_mru_checkbox;
 //}}WTLBUILDER_MEMBER_DECLARATION
     void InitLayout(void);
+
+    struct {
+        bool ApplyMPrefix = false;
+        bool ClearMru = false;
+    } PendingChanges;
+
 public:
+    void ApplyChanges();
     virtual void DefineLayout();
     enum { IDD = IDD_NULL };
     static const UINT _controlsToClip[];
@@ -47,6 +56,7 @@ public:
         COMMAND_ID_HANDLER(IDOK, OnCloseCmd)
         COMMAND_ID_HANDLER(IDCANCEL, OnCloseCmd)
         COMMAND_ID_HANDLER(ID_ADD_M_PREFIX, OnM_Prefix)
+        COMMAND_ID_HANDLER(ID_CLEAR_MRU_CHECKBOX, OnClearMruCheckbox)
         COMMAND_CODE_HANDLER(LBN_SELCHANGE, OnListBoxChange)
         REFLECT_NOTIFICATIONS()
     END_MSG_MAP()
@@ -58,5 +68,6 @@ public:
     LRESULT OnCloseCmd(WORD /*wNotifyCode*/, WORD wID, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
     LRESULT OnListBoxChange(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL& bHandled);
     LRESULT OnM_Prefix(WORD /*wNotifyCode*/, WORD wID, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
+    LRESULT OnClearMruCheckbox(WORD, WORD, HWND, BOOL&);
 };
 //////////////////////////////////////////////////////////////////////////
